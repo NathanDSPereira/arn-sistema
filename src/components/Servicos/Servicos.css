@@ -1,0 +1,43 @@
+.band-light {
+  background: var(--light-bg);
+  border-block: 1px solid var(--light-border);
+}
+.band-light .section {
+  padding-block: 80px;
+  gap: 40px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 16px;
+}
+.service {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--light-border);
+  border-radius: 20px;
+}
+.service__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--black);
+  color: var(--orange);
+}
+.service h3 {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.service p {
+  margin-top: 4px;
+  font-size: 15px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,18 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 32px 56px;
+  align-items: start;
+  padding-top: 96px;
+}
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 620px;
+  color: var(--text-muted);
+}
+.about__lead {
+  font-size: 19px;
+  color: var(--black);
+}

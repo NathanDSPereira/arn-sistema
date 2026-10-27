@@ -1,0 +1,31 @@
+.business-wrap {
+  padding-top: 80px;
+}
+.business {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 56px 48px;
+  background: var(--orange);
+  color: var(--black);
+  border-radius: 32px;
+}
+.business__text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 640px;
+}
+.business h2 {
+  font-weight: 800;
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+.business p {
+  font-size: 18px;
+  font-weight: 500;
+}

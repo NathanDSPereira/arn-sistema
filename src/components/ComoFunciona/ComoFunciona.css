@@ -1,0 +1,32 @@
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: 32px;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.step__num {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--orange);
+  color: var(--black);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+}
+.step h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.step p {
+  font-size: 16px;
+  color: var(--text-muted);
+}
