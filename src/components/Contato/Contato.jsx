@@ -1,4 +1,4 @@
-// import "./Contato.css";
+import "./Contato.css";
 
 function Contato() {
   return (

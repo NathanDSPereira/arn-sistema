@@ -92,6 +92,7 @@
 .problem:hover {
   border-color: var(--orange);
   background: var(--dark-item-hover);
+  cursor: pointer;
 }
 .problem__icon {
   display: grid;

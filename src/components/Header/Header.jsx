@@ -1,12 +1,13 @@
 // import { useState } from "react";
+import { Link } from "react-router";
 import "./Header.css";
 
 function Header() {
   return (
     <header className="container header">
-      <a
+      <Link
         className="brand"
-        href="#inicio"
+        to="/"
         aria-label="ARN Tecnologia e Suporte, início"
       >
         <span className="brand__mark">ARN</span>
@@ -14,11 +15,12 @@ function Header() {
           <strong>ARN TECNOLOGIA</strong>
           <small>&amp; SUPORTE</small>
         </span>
-      </a>
+      </Link>
       <nav className="nav" aria-label="Principal">
-        <a href="#servicos">Nosso Serviço</a>
-        <a href="#quem-somos">Quem Somos</a>
-        <a href="#contato">Contato</a>
+        <Link to="/">Início</Link>
+        <Link to="/servicos">Nosso Serviço</Link>
+        <Link to="/quem-somos">Quem Somos</Link>
+        <Link to="/contato">Contato</Link>
       </nav>
       <a
         className="btn btn--orange btn--sm"

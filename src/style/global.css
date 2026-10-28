@@ -170,6 +170,7 @@ button:focus-visible {
   line-height: 1.1;
   letter-spacing: -0.025em;
   text-wrap: balance;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {

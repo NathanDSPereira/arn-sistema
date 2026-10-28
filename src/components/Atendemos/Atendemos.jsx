@@ -1,6 +1,6 @@
-// import "./Servicos.css";
+import "./Atendemos.css";
 
-function Servicos() {
+function Atendemos() {
   return (
     <section id="servicos" className="band-light">
       <div className="container section">
@@ -81,4 +81,4 @@ function Servicos() {
   );
 }
 
-export default Servicos;
+export default Atendemos;

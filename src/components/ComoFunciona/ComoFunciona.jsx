@@ -1,4 +1,4 @@
-// import "./ComoFunciona.css";
+import "./ComoFunciona.css";
 
 function ComoFunciona() {
   return (

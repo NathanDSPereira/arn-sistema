@@ -1,4 +1,4 @@
-// import "./Empresa.css";
+import "./Empresa.css";
 
 function Empresa() {
   return (
