@@ -2,6 +2,7 @@
   background: var(--black);
   color: var(--text-muted-dark);
   font-size: 14px;
+  padding: 10px 0;
 }
 .footer__inner {
   display: flex;

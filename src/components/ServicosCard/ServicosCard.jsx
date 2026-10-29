@@ -1,11 +1,44 @@
-function ServicosCard({ servico, voltar }) {
+import {
+  Monitor,
+  Code,
+  Cpu,
+  Settings,
+  Hammer,
+  PaintRoller,
+  Zap,
+  Wrench,
+  BrickWall,
+} from "lucide-react";
+
+const iconesServicos = {
+  Monitor,
+  Code,
+  Cpu,
+  Settings,
+  Hammer,
+  PaintRoller,
+  Zap,
+  Wrench,
+  BrickWall,
+};
+
+function ServicosCard({ servico, onSelect }) {
+  const Icone = iconesServicos[servico.icon] ?? Monitor;
+
   return (
-    <div className="servicos-card">
-      {/* <div className="servicos-card__icon">{servico.icon}</div> */}
-      <h3 className="servicos-card__title">{servico.title}</h3>
-      <p className="servicos-card__description">{servico.summary}</p>
-      <button onClick={voltar}>Voltar</button>
-    </div>
+    <button
+      type="button"
+      className="service-card"
+      onClick={() => onSelect(servico)}
+    >
+      <div className="servico-card__icon">
+        <Icone size={32} />
+      </div>
+
+      <h2 className="servico-card__title">{servico.title}</h2>
+
+      <p className="servico-card__summary">{servico.summary}</p>
+    </button>
   );
 }
 

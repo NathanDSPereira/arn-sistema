@@ -1,19 +1,33 @@
 :root {
-  /* Cores da marca */
-  --orange: #ff6a13; /* fundos e botões (texto preto por cima) */
-  --orange-text: #c2410c; /* laranja para texto sobre fundo claro (contraste ok) */
-  --black: #0a0a0a;
+  /* Marca */
+  --orange: #ff6a13;
+  --orange-text: #c2410c;
+  --black: #030303da;
   --white: #ffffff;
 
-  /* Neutros */
+  /* Superfícies */
+  --light-bg: #f5f5f4;
+  --light-card: #ffffff;
+  --light-border: #e7e5e4;
+  --light-dark: #f5f5f4c3;
+
+  --dark-bg: #111111;
   --dark-card: #171717;
   --dark-item: #1f1f1f;
   --dark-item-hover: #262626;
   --dark-border: #2e2e2e;
-  --light-bg: #f5f5f4;
-  --light-border: #e7e5e4;
-  --text-muted: #525252; /* texto secundário sobre claro */
-  --text-muted-dark: #d4d4d4; /* texto secundário sobre escuro */
+
+  /* Textos */
+  --text-primary: #171717;
+  --text-muted: #525252;
+  --text-muted-dark: #d4d4d4;
+
+  /* UI */
+  --radius-card: 16px;
+  --radius-button: 10px;
+  --shadow-card: 0 4px 16px rgb(0 0 0 / 6%);
+  --transition-ui: 180ms ease;
+  /* texto secundário sobre escuro */
 
   /* Tipografia */
   --font-display: "Bricolage Grotesque", system-ui, sans-serif;
@@ -22,6 +36,9 @@
   /* Layout */
   --container: 1200px;
   --gutter: 24px;
+
+  min-height: 100%;
+  margin: 0;
 }
 
 /* ---------- Base ---------- */
@@ -156,6 +173,16 @@ button:focus-visible {
 .dark {
   background: var(--black);
   color: var(--white);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__main {
+  flex: 1;
 }
 
 .section {

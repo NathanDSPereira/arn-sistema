@@ -2,20 +2,12 @@ import { useState } from "react";
 import { services } from "../../data/servicos";
 import "./ServicosLista.css";
 import ServicosCard from "../ServicosCard/ServicosCard";
-import { Monitor, Code, Cpu, Settings, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 function ServicosLista() {
   const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
   const [servicoSelecionado, setServicoSelecionado] = useState(null);
   // const selecionado = services.find((servico) => servico.id === idSelecionado);
-
-  const iconesServicos = {
-    Monitor,
-    Code,
-    Cpu,
-    Settings,
-    ArrowLeft,
-  };
 
   return (
     <main className="servicos">
@@ -41,7 +33,7 @@ function ServicosLista() {
             (setCategoriaSelecionada(null), setServicoSelecionado(null));
           }}
         >
-          Voltar às categorias
+          <ArrowLeft size={32} />
         </button>
       )}
 
@@ -50,12 +42,20 @@ function ServicosLista() {
           ? (categoriaSelecionada.subservicos ?? [])
           : services
         ).map((servico) => (
-          <div
+          <ServicosCard
             key={servico.id}
             className="service-card"
+            servico={servico}
+            onSelect={(item) => {
+              if (!categoriaSelecionada) {
+                setCategoriaSelecionada(item);
+              } else {
+                setServicoSelecionado(item);
+              }
+            }}
           >
             {servico.title}
-          </div>
+          </ServicosCard>
         ))}
       </div>
     </main>

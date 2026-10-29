@@ -7,7 +7,7 @@
 .servicos {
   --s-orange: var(--orange, #ff6a13);
   --s-orange-text: var(--orange-text, #c2410c);
-  --s-black: var(--black, #0a0a0a);
+  --s-black: var(--dark-card);
   --s-muted: var(--text-muted, #525252);
   --s-muted-dark: var(--text-muted-dark, #d4d4d4);
   --s-border: var(--light-border, #e7e5e4);
@@ -37,12 +37,18 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 24px;
-  padding: 10px 0;
+  padding: 10px 10px;
   border: 0;
-  background: transparent;
-  color: var(--orange);
+  background: var(--s-orange);
+  color: var(--black);
+  border-radius: 100%;
+
   font: inherit;
   cursor: pointer;
+}
+
+.servicos__back:hover {
+  filter: brightness(0.92);
 }
 
 .servicos__header {
@@ -78,6 +84,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 24px;
+  margin-top: 25px;
 }
 
 .service-card {
